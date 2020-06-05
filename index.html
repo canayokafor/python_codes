@@ -1,10 +1,89 @@
-DOCTYPE html
+<!DOCTYPE html>
 <html>
 <head>
     <title>My Website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        @media (min-width: 600px) {
+            body {
+                background-color: red;
+            }
+            h1::before {
+                content: "Welcome to my page!";
+            }
+        }
+        @media (max-width: 599px) {
+            body {
+                background-color: blue;
+            }
+            h1::before {
+                content: "Welcome!";
+            }
+        }
+        
+        h1, h2 {
+            color: white;
+        }
+        input[type=text]{
+            background-color: blue;
+        }
+        input[type=number]{
+            background-color: yellowgreen;
+        }
+        button {
+            width: 300px;
+            height: 50px;
+            background-color: green;
+            
+        }
+        button:hover {
+            background-color: orange;
+        }
+        a::before {
+            content: "\21d2 Click here: ";
+            font-weight: bold;
+        }
+        p::selection {
+            background-color: yellowgreen;
+            color: red;
+        }
+    </style>
 </head>
 <body>
-    Hello world!
+    <h1></h1>
+<form>
+    <div>
+        <input name="name" type="text" placeholder="Name">
+        <input name="password" type="password" placeholder="password">
+    <div>
+
+<div>
+    Favorite Color?
+    <input name="color" type="radio" value="red">Red
+    <input name="color" type="radio" value="blue">Blue
+    <input name="color" type="radio" value="green">green
+    <input name="color" type="radio" value="other">Other
+</div>
+    <input name="country" list="countries" placeholder="country">
+    <datalist id="countries">
+        <option value="Afganistan">
+        <option value="Nigeria">
+        <option value="United States">
+    </datalist>
+
+</form>
+<form action="">
+    <input name="firstname" type="text" placeholder="First Name">
+    <input name="lastname" type="text" placeholder="Last Name">
+    <input name="age" type="number">
+    <button>Sign Up</button>
+</form>
+<ul>
+    <li><a href="#">one link</a></li>
+    <li><a href="#">another link</a></li>
+    <li><a href="#">third link</a></li>
+</ul>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, eveniet aut nam asperiores aperiam minus eum doloremque totam illum dolorem.</p>
 </body>
 
 </html>
